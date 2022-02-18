@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Highlight & Filter</title>
 </head>
 <body>
-    
+    <div class="tab-wrapper">
+        <nav>
+            <ul class="tab-menu">
+                <li><a href="#tabs-1" class="active">basic</a></li>
+                <li><a href="#tabs-2">advanced</a></li>
+                <li><a href="#tabs-3">expert</a></li>
+            </ul>
+            <span class="highlight"></span>
+        </nav>
+        <div id="tab-content">
+            <div id="tabs-1" class="active">
+                <h2>Basic Plan</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In rerum eaque soluta, non ducimus veritatis. Fuga esse libero natus id consequuntur deserunt, nam accusantium alias eaque asperiores temporibus facere eveniet iusto architecto explicabo nesciunt tempora corporis commodi! Atque cupiditate ex libero ullam debitis, quo, quis maxime in ipsa rerum corporis.</p>
+            </div>
+            <div id="tabs-3">
+                <h2>advanced Plan</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In rerum eaque soluta, non ducimus veritatis. Fuga esse libero natus id consequuntur deserunt, nam accusantium alias eaque asperiores temporibus facere eveniet iusto architecto explicabo nesciunt tempora corporis commodi! Atque cupiditate ex libero ullam debitis, quo, quis maxime in ipsa rerum corporis.</p>
+            </div>
+            <div id="tabs-2">
+                <h2>expert Plan</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In rerum eaque soluta, non ducimus veritatis. Fuga esse libero natus id consequuntur deserunt, nam accusantium alias eaque asperiores temporibus facere eveniet iusto architecto explicabo nesciunt tempora corporis commodi! Atque cupiditate ex libero ullam debitis, quo, quis maxime in ipsa rerum corporis.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="highlight.js"></script>
+    <script src="filter.js"></script>
 </body>
 </html>
