@@ -1,4 +1,4 @@
-#### Highlight Moving Animation
+## Highlight Moving Animation
 
 
 ##### HTML
@@ -94,7 +94,9 @@ offset 의 위치는 상대값, 부모요소중 포지션이 기본값이 아닌
 - Element.offsetTop :    요소의 top 값
 - Element.offsetLeft :   요소의 left 값
 
-#### Image Filter - Input Range 를 이용한 방법
+
+
+## Image Filter - Input Range 를 이용한 방법
 
 input range 의 `addEventListener` 적용시...
 - addEventListener('change') : 값이 변할 때 이벤트가 일어나지만 range의 thumb 조절시 드래그 중에는 이벤트 발생 않함.
@@ -126,5 +128,6 @@ element.style.setProperty("background-color", `#000`);
 // CSS 속성명 그대로 사용. 
 ```
 
+##### 기본스타일의 input range 커스텀 참고 [SITE]:https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
 
-##### 기본스타일의 input range 커스텀 참고 [SITE](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
+## Search Input Image filter
