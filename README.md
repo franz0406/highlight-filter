@@ -128,6 +128,6 @@ element.style.setProperty("background-color", `#000`);
 // CSS 속성명 그대로 사용. 
 ```
 
-##### 기본스타일의 input range 커스텀 참고 [SITE]:https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/
+##### 기본스타일의 input range 커스텀 참고 [SITE](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/){:target="_blank"}
 
 ## Search Input Image filter
