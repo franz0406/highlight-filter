@@ -96,7 +96,7 @@ offset 의 위치는 상대값, 부모요소중 포지션이 기본값이 아닌
 
 
 
-## Image Filter - Input Range 를 이용한 방법
+## Input Range 를 이용한 사이즈 조정
 
 input range 의 `addEventListener` 적용시...
 - addEventListener('change') : 값이 변할 때 이벤트가 일어나지만 range의 thumb 조절시 드래그 중에는 이벤트 발생 않함.
@@ -124,10 +124,46 @@ inputRange.addEventListener('input', function(){
 ```
 사용자가 정의한 CSS 속성을 사용하려면 `setProperty()`를 사용해야함.
 ```javascript
-element.style.setProperty("background-color", `#000`); 
+// 사용자 속성
+element.style.setProperty("--main-bg", `#000`); 
+
 // CSS 속성명 그대로 사용. 
+element.style.setProperty("background-color, `#000`); 
 ```
 
-##### 기본스타일의 input range 커스텀 참고 [SITE](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/){:target="_blank"}
+##### 기본스타일의 input range CSS 커스텀 참고 [SITE](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
 
-## Search Input Image filter
+---
+---
+## string.includes( searchString, position )
+
+- searchString : 검색할 문자열
+- position : 검색을 시작할 위치, 기본값 0  
+
+문자열을 찾아내면 `true`. 실패하면 `false`  
+
+대소문자 구분 `"HWANG".includes("hwang") = false`  
+
+'hwang'.includes( 'h' ) : 'h' 를 있으니 true   
+
+'hwang'.includes( 'H' ) : 'H' 대분자 없으니 false  
+
+'hwang'.includes( 'w', 2 ) : index 2 부터 ang 에 'w' 가 없으니 false  
+'hwang'.includes( 'w', 1 ) : index 1 부터 wang 에 'w' 가 있으니 ture
+
+## Array.filter( element, index, array)
+ 
+- element = 배열 각각의 요소 
+- index [ option ] = 처리할 현재 요소의 인덱스
+- array [ option ] = filter를 호출한 배열
+
+콜백함수의 리턴값이 `true` 인 요소들만 모아 새로운 배열로 반환됨.  
+
+기존 배열의 값은 그대로 유지되니 값을 저장할 새로운 변수를 만들어야함. 
+```javascript
+const arr = ["3,15,6,20,40"];
+
+const newArr = arr.filter( arr => arr % 3 == 0 )
+
+console.log(newArr) // 결과 => [3, 15, 6]
+```  

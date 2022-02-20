@@ -36,3 +36,38 @@ inputRange.addEventListener('input', function(){
     console.dir(document.documentElement.style)    
     imageList.style.gridTemplateColumns = `repeat(auto-fit, minmax(${this.value}px, 1fr))`;
 })
+
+// 검색키워드로 필터 적용
+const inputSearch = document.querySelector('input[type="search"]');
+const filteredNum = document.querySelector('.toolbar .counter span');
+const figcaptions = document.querySelectorAll("figcaption > p:first-of-type");
+const figcaptionsArray = [];
+let counter = 0;
+
+for(const figcaption of figcaptions) {
+    figcaptionsArray.push({
+        idx: counter++,
+        text: figcaption.textContent
+    });
+}
+
+inputSearch.addEventListener('keyup', keyupHandler);
+
+function keyupHandler(){    
+    for(const list of imageListItems){
+        list.classList.add(DNONE);
+    }
+
+    const keywords = this.value;
+    const filteredArray = figcaptionsArray.filter( element => element.text.toLowerCase().includes(keywords.toLowerCase()));
+    
+    if(filteredArray.length > 0){
+        for(const item of filteredArray){
+            imageListItems[item.idx].classList.remove(DNONE);
+        }        
+    }
+
+    filteredNum.textContent = filteredArray.length;
+
+}
+
