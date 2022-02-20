@@ -144,14 +144,14 @@ element.style.setProperty("background-color, `#000`);
 
 대소문자 구분 `"HWANG".includes("hwang") = false`  
 
-'hwang'.includes( 'h' ) : 'h' 를 있으니 true   
+'hwang'.includes( 'h' ) : 'h' 가 있으니 true   
 
-'hwang'.includes( 'H' ) : 'H' 대분자 없으니 false  
+'hwang'.includes( 'H' ) : 'H' 대문자 없으니 false  
 
-'hwang'.includes( 'w', 2 ) : index 2 부터 ang 에 'w' 가 없으니 false  
-'hwang'.includes( 'w', 1 ) : index 1 부터 wang 에 'w' 가 있으니 ture
+'hwang'.includes( 'w', 2 ) : 2 번째 부터 ang 에 'w' 가 없으니 false  
+'hwang'.includes( 'w', 1 ) : 1 번째 부터 wang 에 'w' 가 있으니 ture
 
-## Array.filter( element, index, array)
+## Array.filter( callback(element, index, array))
  
 - element = 배열 각각의 요소 
 - index [ option ] = 처리할 현재 요소의 인덱스
